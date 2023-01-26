@@ -7,6 +7,9 @@ import Loader from "./components/loader/loader.component";
 const CheckPollingUnits = lazy(() =>
   import('./pages/check-polling-units/check-polling-units.component'),
 );
+const  TotalResults = lazy(() =>
+  import('./pages/total-results/total-results.component'),
+);
 
 function App() {
   return (
@@ -16,6 +19,7 @@ function App() {
       <ErrorBoundary>
         <Suspense fallback={<Loader />}>
         <Route path={'/'} exact={true} component={CheckPollingUnits} />
+        <Route path={'/lga/results'} exact={true} component={TotalResults} />
         </Suspense>
       </ErrorBoundary>
       </Switch>
