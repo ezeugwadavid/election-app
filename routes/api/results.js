@@ -172,7 +172,6 @@ router.post("/pollingunit", async (req, res) => {
       `,
       { type: QueryTypes.INSERT }
     );
-
     return res.status(200).json({ results: "created" });
   } catch (error) {
     console.log(error);
@@ -189,6 +188,7 @@ router.post("/pollingunit", async (req, res) => {
 //@desc  create new polling unit results
 //@access Public
 router.post("/pollresults", async (req, res) => {
+
   const {
     polling_unit_uniqueid,
     party_abbreviation,
@@ -197,6 +197,7 @@ router.post("/pollresults", async (req, res) => {
     date_entered,
     user_ip_address,
   } = req.body;
+  
   try {
     const createNewResult = await sequelize.query(
       `INSERT INTO announced_pu_results (polling_unit_uniqueid, party_abbreviation, party_score, entered_by_user, date_entered, user_ip_address) VALUES
@@ -212,6 +213,57 @@ router.post("/pollresults", async (req, res) => {
       .status(400)
       .json({
         error: "could not create results at this time, please try again later",
+      });
+  }
+});
+
+
+
+//@route GET api/election/allpollingunits
+//@desc  get newly created polling units
+//@access Public
+router.post("/allpollingunits", async (req, res) => {
+  const {
+    polling_unit_id
+  } = req.body;
+  try {
+    const pollingUnits = await sequelize.query(
+      `SELECT * FROM polling_unit WHERE polling_unit_id = '${polling_unit_id}'
+      `,
+      { type: QueryTypes.SELECT}
+    );
+    return res.status(200).json({ results: pollingUnits });
+  } catch (error) {
+    console.log(error);
+    return res
+      .status(400)
+      .json({
+        error: "could not fetch polling units, please try again later",
+      });
+  }
+});
+
+//@route GET api/election/wards
+//@desc  get wards by lga
+//@access Public
+router.post("/wards", async (req, res) => {
+  const {
+    lga_id
+  } = req.body;
+  try {
+    const wards = await sequelize.query(
+      `SELECT uniqueid, ward_id, ward_name FROM ward WHERE lga_id = '${lga_id}'
+      `,
+      { type: QueryTypes.SELECT }
+    );
+  
+    return res.status(200).json({ results: wards });
+  } catch (error) {
+    console.log(error);
+    return res
+      .status(400)
+      .json({
+        error: "could not fetch wards, please try again later",
       });
   }
 });
