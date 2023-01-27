@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useParams } from "react-router";
+import { useHistory } from "react-router-dom"
 import { NewResultContainer } from "./new-result.styles";
 
 const NewResult = () => {
@@ -9,6 +9,8 @@ const NewResult = () => {
   const [loading, setLoading] = useState(false);
   const [created, setCreated] = useState(false);
   const [ip, setIp] = useState();
+
+  const history = useHistory()
 
   const getIp = async () => {
     const response = await fetch("https://ipapi.co/json/");
@@ -40,25 +42,23 @@ const NewResult = () => {
   const urlParams = new URLSearchParams(queryString);
 
   const id = urlParams.get("id");
-  console.log(id);
 
   const submitResult = () => {
     setLoading(true);
     const userData = {
       polling_unit_uniqueid: id,
+      party_abbreviation: credentials.party_abbreviation,
       party_score: parseInt(credentials.party_score),
       entered_by_user: credentials.entered_by_user,
       date_entered: "2023-02-27 15:44:03",
       user_ip_address: ip,
     };
-    console.log(userData);
 
     axios
       .post("http://localhost:5000/api/election/pollresults", userData)
       .then(function (response) {
-        console.log(response);
         setCreated(true);
-        setLoading(false);
+        setLoading(false); 
       })
       .catch(function (error) {
         console.log(error);
@@ -148,6 +148,17 @@ const NewResult = () => {
           <button className="btn" onClick={(e) => handleSubmit(e)}>
             {loading ? "loading..." : "Submit"}
           </button>
+          
+          {
+            created ?
+          <div className="polling-units">
+              Results has been recorded 
+          </div>
+          :
+          ''
+          }
+
+
         </div>
       </div>
     </NewResultContainer>

@@ -68,4 +68,45 @@ export const TotalResultsContainer = styled.div`
     border-collapse: collapse;
     padding: 10px;
   }
+
+  @media screen and (max-width: 800px) {
+    display: flex;
+    justify-content: center;
+    .btn {
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding: 5px;
+    width: 100px;
+    background-color: #4d90fe;
+    color: #ffffff;
+    border: 1px solid #4d90fe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+
+  .main {
+    width: 90%;
+    margin: 30px auto;
+  }
+
+  .drop-down {
+    font-family: "DM Sans", sans-serif;
+    padding: 10px;
+    font-size: 16px;
+    width: 90%;
+    display: flex;
+    justify-content: start;
+    cursor: pointer;
+  }
+
+  .table {
+    width: 90%;
+    overflow-x: scroll;
+  }
+}
 `;

@@ -15,6 +15,16 @@ export const CheckPollingUnitsContainer = styled.div`
     text-align: left;
   }
 
+  .label-2 {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 31px;
+    color: #000000;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+
   .err {
     font-family: "DM Sans", sans-serif;
     font-weight: 400;
@@ -62,12 +72,18 @@ export const CheckPollingUnitsContainer = styled.div`
     margin-top: 20px;
     margin-bottom: 50px;
     padding: 10px;
-    width: 70px;
+    width: 15%;
     background-color: #4d90fe;
     color: #ffffff;
     border: 1px solid #4d90fe;
     display: flex;
-    justify-content: start;
+    justify-content: center;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .buttons{
+    display: flex;
   }
 
   table {
@@ -100,4 +116,53 @@ export const CheckPollingUnitsContainer = styled.div`
     border-collapse: collapse;
     padding: 10px;
   }
+
+  @media screen and (max-width: 800px) {
+    display: flex;
+    justify-content: center;
+    .btn {
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding: 5px;
+    width: 100px;
+    background-color: #4d90fe;
+    color: #ffffff;
+    border: 1px solid #4d90fe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+
+  .main {
+    width: 90%;
+    margin: 30px auto;
+  }
+
+  .input {
+    border: 1px solid #000000;
+    padding: 10px;
+    font-size: 16px;
+    width: 90%;
+    display: flex;
+    justify-content: start;
+  }
+
+  .err-input {
+    border: 1px solid red;
+    padding: 10px;
+    font-size: 16px;
+    width: 90%;
+    display: flex;
+    justify-content: start;
+  }
+
+  .table {
+    width: 90%;
+    overflow-x: scroll;
+  }
+}
 `;

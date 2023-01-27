@@ -49,7 +49,7 @@ export const NewResultContainer = styled.div`
     font-family: "DM Sans", sans-serif;
     padding: 10px;
     font-size: 16px;
-    width: 78%;
+    width: 80%;
     display: flex;
     justify-content: start;
     cursor: pointer;
@@ -92,10 +92,71 @@ export const NewResultContainer = styled.div`
     font-family: "DM Sans", sans-serif;
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 10px;
     margin: 10px 0px;
-    background-color: #F1F1F1;
-    width: 75%;
+    background-color: #268d5f;
+    color: #ffffff;
+    width: 73%;
+    border-radius: 5px;
   }
+
+  @media screen and (max-width: 800px) {
+    display: flex;
+    justify-content: center;
+    .btn {
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding: 5px;
+    width: 100px;
+    background-color: #4d90fe;
+    color: #ffffff;
+    border: 1px solid #4d90fe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+
+  .container {
+    width: 90%;
+    margin: 30px auto;
+  }
+
+  .input {
+    border: 1px solid #000000;
+    padding: 10px;
+    font-size: 16px;
+    width: 90%;
+    display: flex;
+    justify-content: start;
+  }
+
+  .err-input {
+    border: 1px solid red;
+    padding: 10px;
+    font-size: 16px;
+    width: 90%;
+    display: flex;
+    justify-content: start;
+  }
+
+  .table {
+    width: 90%;
+    overflow-x: scroll;
+  }
+
+  .drop-down {
+    font-family: "DM Sans", sans-serif;
+    padding: 10px;
+    font-size: 16px;
+    width: 96%;
+    display: flex;
+    justify-content: start;
+    cursor: pointer;
+  }
+}
 
 `;

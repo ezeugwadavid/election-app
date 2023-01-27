@@ -99,6 +99,10 @@ const NewPollingUnit = () => {
       });
   };
 
+  const loadPage = (id) => {
+    window.location.href = `http://localhost:3000/new/results?id=${id}`
+  };
+
   const handleChange = (e) => {
     setError(false);
     const { name, value } = e.target;
@@ -259,6 +263,7 @@ const NewPollingUnit = () => {
                   <Link
                     to={`/new/results?id=${polUnit.uniqueid}`}
                     className="link"
+                    onClick={() => loadPage(polUnit.uniqueid)}
                   >
                     Submit New Result
                   </Link>

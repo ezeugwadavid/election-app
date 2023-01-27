@@ -104,4 +104,85 @@ export const NewPollingUnitContainer = styled.div`
   }
 
 
+  @media screen and (max-width: 800px) {
+    display: flex;
+    justify-content: center;
+
+   .container {
+    width: 90%;
+    margin: 30px auto;
+  }
+    .btn {
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding: 5px;
+    width: 100px;
+    background-color: #4d90fe;
+    color: #ffffff;
+    border: 1px solid #4d90fe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+
+  .input {
+    border: 1px solid #000000;
+    padding: 10px;
+    font-size: 16px;
+    width: 90%;
+    display: flex;
+    justify-content: start;
+    margin-bottom: 20px;
+  }
+
+  .err-input {
+    border: 1px solid red;
+    padding: 10px;
+    font-size: 16px;
+    width: 90%;
+    display: flex;
+    justify-content: start;
+  }
+
+  .err-text {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 31px;
+    color: red;
+    margin-bottom: 4px;
+    text-align: left;
+  }
+
+  .drop-down {
+    font-family: "DM Sans", sans-serif;
+    padding: 10px;
+    font-size: 16px;
+    width: 95%;
+    display: flex;
+    justify-content: start;
+    cursor: pointer;
+  }
+
+  .table {
+    width: 90%;
+    overflow-x: scroll;
+  }
+
+  .polling-units{
+    font-family: "DM Sans", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 10px 0px;
+    background-color: #F1F1F1;
+    width: 85%;
+  }
+}
+
+
 `;

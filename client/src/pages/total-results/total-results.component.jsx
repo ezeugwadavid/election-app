@@ -36,7 +36,6 @@ const TotalResults = () => {
         console.log(error);
       });
   };
-  console.log(totalResults);
 
   const handleChange = (event) => {
     setValue(event.target.value);

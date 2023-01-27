@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { NavLink } from "react-router-dom";
 import { CheckPollingUnitsContainer } from "./check-polling-units.styles";
 
 const CheckPollingUnits = () => {
@@ -101,6 +102,14 @@ const CheckPollingUnits = () => {
       });
   };
 
+  const loadResultsPage = () => {
+   window.location.href = "http://localhost:3000/lga/results";
+  };
+
+  const loadPollingPage = () => {
+   window.location.href = "http://localhost:3000/new/pollingunit";
+  };
+
   const defaultField = {
     polling_unit_name: "",
   };
@@ -127,8 +136,9 @@ const CheckPollingUnits = () => {
   return (
     <CheckPollingUnitsContainer>
       <div className="main">
+      <div className="label-2">Get Results For Elections Conducted in Delta State in 2011</div>
         <div className="search">
-          <div className="label">Enter Polling Unit Name</div>
+          <div className="label">Enter Polling Unit Name (e.g Ishere Primary School  Aghara)</div>
           <input
             className={formErr ? "err-input" : "input"}
             name="polling_unit_name"
@@ -140,9 +150,18 @@ const CheckPollingUnits = () => {
           ) : (
             ""
           )}
+          <div className="buttons">
           <button className="btn" onClick={(e) => handleSubmit(e)}>
             {loading ? "loading..." : "Submit"}
           </button>
+          <button className="btn" onClick={loadResultsPage}>
+            Total results
+          </button>
+          <button className="btn" onClick={loadPollingPage}>
+            New polling unit
+          </button>
+          </div>
+          
         </div>
         {error === false && table === true ? (
           <div className="table">
