@@ -4,7 +4,7 @@
   "description": "results from nigeria elections",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jasmine",
     "createtables": "node queries",
     "start": "node server",
     "server": "nodemon server.js"
@@ -19,6 +19,10 @@
     "nodemon": "^2.0.20",
     "pg": "^8.8.0",
     "pg-hstore": "^2.3.4",
+    "request": "^2.88.2",
     "sequelize": "^6.28.0"
+  },
+  "devDependencies": {
+    "jasmine": "^4.5.0"
   }
 }

@@ -17,7 +17,6 @@ router.post("/pollingresults", async (req, res) => {
     );
     const uniqueid = pollingUnits[0].uniqueid;
     const uniqueidString = uniqueid.toString();
-    console.log(uniqueidString);
     const pollingUnitResults = await sequelize.query(
       `SELECT * FROM announced_pu_results WHERE polling_unit_uniqueid='${uniqueidString}'`,
       { type: QueryTypes.SELECT }

@@ -55,7 +55,7 @@ const NewResult = () => {
     };
 
     axios
-      .post("http://localhost:5000/api/election/pollresults", userData)
+      .post("https://drab-gold-duck-cape.cyclic.app/api/election/pollresults", userData)
       .then(function (response) {
         setCreated(true);
         setLoading(false); 
