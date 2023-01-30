@@ -7,7 +7,8 @@
     "test": "jasmine",
     "createtables": "node queries",
     "start": "node server",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "build": "npm install"
   },
   "author": "David Ezeugwa",
   "license": "MIT",
