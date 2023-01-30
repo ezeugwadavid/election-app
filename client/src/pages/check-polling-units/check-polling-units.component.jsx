@@ -138,7 +138,7 @@ const CheckPollingUnits = () => {
       <div className="main">
       <div className="label-2">Get Results For Elections Conducted in Delta State in 2011</div>
         <div className="search">
-          <div className="label">Enter Polling Unit Name (e.g Ishere Primary School  Aghara)</div>
+          <div className="label">Enter Polling Unit Name (e.g Primary School in Aghara)</div>
           <input
             className={formErr ? "err-input" : "input"}
             name="polling_unit_name"
