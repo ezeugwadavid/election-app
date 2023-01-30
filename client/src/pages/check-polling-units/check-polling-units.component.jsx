@@ -103,11 +103,11 @@ const CheckPollingUnits = () => {
   };
 
   const loadResultsPage = () => {
-   window.location.href = "https://election-results.netlify.app/lga/results";
+   window.location.href = "https://election-app-binmo.netlify.app/lga/results";
   };
 
   const loadPollingPage = () => {
-   window.location.href = "https://election-results.netlify.app/new/pollingunit";
+   window.location.href = "https://election-app-binmo.netlify.app/new/pollingunit";
   };
 
   const defaultField = {

@@ -100,7 +100,7 @@ const NewPollingUnit = () => {
   };
 
   const loadPage = (id) => {
-    window.location.href = `https://election-results.netlify.app/new/results?id=${id}`
+    window.location.href = `https://election-app-binmo.netlify.app/new/results?id=${id}`
   };
 
   const handleChange = (e) => {
