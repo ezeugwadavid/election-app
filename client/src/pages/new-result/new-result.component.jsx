@@ -55,7 +55,7 @@ const NewResult = () => {
     };
 
     axios
-      .post("https://drab-gold-duck-cape.cyclic.app/api/election/pollresults", userData)
+      .post("https://energetic-hare-wig.cyclic.app/api/election/pollresults", userData)
       .then(function (response) {
         setCreated(true);
         setLoading(false); 

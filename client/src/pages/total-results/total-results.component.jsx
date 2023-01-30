@@ -11,7 +11,7 @@ const TotalResults = () => {
 
   const getLga = () => {
     axios
-      .get("https://drab-gold-duck-cape.cyclic.app/api/election/lga")
+      .get("https://energetic-hare-wig.cyclic.app/api/election/lga")
       .then(function (response) {
         setLga(response.data.results);
       })
@@ -26,7 +26,7 @@ const TotalResults = () => {
       lga_id: value,
     };
     axios
-      .post("https://drab-gold-duck-cape.cyclic.app/api/election/totalresults", userData)
+      .post("https://energetic-hare-wig.cyclic.app/api/election/totalresults", userData)
       .then(function (response) {
         seTotalResults(response.data.results);
         setLoading(false);

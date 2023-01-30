@@ -52,7 +52,7 @@ const NewPollingUnit = () => {
     console.log(userData);
 
     axios
-      .post("https://drab-gold-duck-cape.cyclic.app/api/election/pollingunit", userData)
+      .post("https://energetic-hare-wig.cyclic.app/api/election/pollingunit", userData)
       .then(function (response) {
         setCreated(true);
         setLoading(false);
@@ -64,7 +64,7 @@ const NewPollingUnit = () => {
 
   const getLga = () => {
     axios
-      .get("https://drab-gold-duck-cape.cyclic.app/api/election/lga")
+      .get("https://energetic-hare-wig.cyclic.app/api/election/lga")
       .then(function (response) {
         setLga(response.data.results);
       })
@@ -77,7 +77,7 @@ const NewPollingUnit = () => {
       lga_id: parseInt(credentials.lga),
     };
     axios
-      .post("https://drab-gold-duck-cape.cyclic.app/api/election/wards", data)
+      .post("https://energetic-hare-wig.cyclic.app/api/election/wards", data)
       .then(function (response) {
         setWards(response.data.results);
       })
@@ -90,7 +90,7 @@ const NewPollingUnit = () => {
       polling_unit_id: 88,
     };
     axios
-      .post("https://drab-gold-duck-cape.cyclic.app/api/election/allpollingunits", data)
+      .post("https://energetic-hare-wig.cyclic.app/api/election/allpollingunits", data)
       .then(function (response) {
         setPollingUnits(response.data.results);
       })
@@ -100,7 +100,7 @@ const NewPollingUnit = () => {
   };
 
   const loadPage = (id) => {
-    window.location.href = `https://drab-gold-duck-cape.cyclic.app/new/results?id=${id}`
+    window.location.href = `https://election-results.netlify.app/new/results?id=${id}`
   };
 
   const handleChange = (e) => {
