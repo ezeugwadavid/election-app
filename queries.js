@@ -913,34 +913,34 @@ const populateWardTable = async () => {
 
 
 
-//module.exports = {createAgentNameTable, populateAgentNameTable};
+//you may need to run each function at a time, will come up with a more efficient way in the future.
 
-//  const createAgentTable =  createAgentNameTable();
-//  createAgentTable.then(response => console.log(response));
+ const createAgentTable =  createAgentNameTable();
+ createAgentTable.then(response => console.log(response));
 
-// const populatedAgentTable = populateAgentNameTable();
-// populatedAgentTable.then(result => console.log(result));
+const populatedAgentTable = populateAgentNameTable();
+populatedAgentTable.then(result => console.log(result));
 
-//  const createPollingTable = createPollingUnitTable();
-//  createPollingTable.then(result => console.log(result));
+ const createPollingTable = createPollingUnitTable();
+ createPollingTable.then(result => console.log(result));
 
-//  const populatePollingTable = populatePollingUnitTable();
-//  populatePollingTable.then(result => console.log(result));
+ const populatePollingTable = populatePollingUnitTable();
+ populatePollingTable.then(result => console.log(result));
 
-//  const createAnnouncedPuTable = createAnnouncedPuResultsTable();
-//  createAnnouncedPuTable.then(result => console.log(result));
+ const createAnnouncedPuTable = createAnnouncedPuResultsTable();
+ createAnnouncedPuTable.then(result => console.log(result));
 
-//  const populateAnnouncedPuTable = populateAnnouncedPuResultsTable();
-//  populateAnnouncedPuTable.then(result => console.log(result));
+ const populateAnnouncedPuTable = populateAnnouncedPuResultsTable();
+ populateAnnouncedPuTable.then(result => console.log(result));
 
-// const createLga = createLgaTable();
-// createLga.then(result => console.log(result));
+const createLga = createLgaTable();
+createLga.then(result => console.log(result));
 
-//  const populateLga = populateLgaTable();
-//  populateLga.then(result => console.log(result));
+ const populateLga = populateLgaTable();
+ populateLga.then(result => console.log(result));
 
-//  const createWard = createWardTable();
-//  createWard.then(result => console.log(result));
+ const createWard = createWardTable();
+ createWard.then(result => console.log(result));
 
-//  const populateWard = populateWardTable();
-//  populateWard.then(result => console.log(result));
+ const populateWard = populateWardTable();
+ populateWard.then(result => console.log(result));
